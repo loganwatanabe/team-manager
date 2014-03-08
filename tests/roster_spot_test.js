@@ -339,37 +339,37 @@ describe('RosterSpot', function(){	//context, so we can see where tests happen i
 
                    //Tests for the self.methods in Teams and Players.
 
-                   // it('Team instance method getPlayers', function(done){
+                   it('Team instance method getPlayers', function(done){
 
-	                  //  	cobras.getPlayers(function(players){
-	                  //  		players.should.have.length(2);
+	                   	cobras.getPlayers(function(players){
+	                   		players.should.have.length(2);
 
-	                  //  		averages.getPlayers(function(players){
-	                  //  			players.should.have.length(3);
+	                   		averages.getPlayers(function(players){
+	                   			players.should.have.length(3);
 
-	                  //  			done();
-	                  //  		});
-	                  //  	});
-                   // });
+	                   			done();
+	                   		});
+	                   	});
+                   });
 
-                   // it('Player instance method getTeams', function(done){
+                   it('Player instance method getTeams', function(done){
 
-	                  //  	peter.getTeams(function(teams){
-	                  //  		teams.should.have.length(1);
-	                  //  		teams.should.have.property('name', 'Average Joes')
+	                   	peter.getTeams(function(teams){
+	                   		teams.should.have.length(1);
+	                   		teams[0].should.have.property('name', 'Average Joes')
 
-	                  //  		white.getTeams(function(teams){
-	                  //  			teams.should.have.length(1);
-	                  //  			teams.should.have.property('name', 'Purple Cobras')
+	                   		white.getTeams(function(teams){
+	                   			teams.should.have.length(1);
+	                   			teams[0].should.have.property('name', 'Purple Cobras')
 
-	                  //  			benedict.getTeams(function(teams){
-	                  //  				teams.should.have.length(2);
+	                   			benedict.getTeams(function(teams){
+	                   				teams.should.have.length(2);
 
-	                  //  				done();
-	                  //  			});
-	                  //  		});
-	                  //  	});
-                   // });
+	                   				done();
+	                   			});
+	                   		});
+	                   	});
+                   });
 
 
                });//describe
