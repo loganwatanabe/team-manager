@@ -12,6 +12,8 @@ var Schema = mongoose.Schema;
 var	ObjectId = Schema.ObjectId;
 var	Team = mongoose.model('Team');
 var	Player = mongoose.model('Player');
+// var	Player = require('./player.js').Player;
+// console.log(Player);
 
 var RosterSpotSchema = new Schema({
 	team_id: {type: ObjectId, required: true},
@@ -110,4 +112,5 @@ RosterSpotSchema.statics.getPlayersForTeam = function(team_id, callback) {
 
 
 mongoose.model('RosterSpot', RosterSpotSchema);
-module.exports = mongoose.model('RosterSpot', RosterSpotSchema);
+module.exports.RosterSpot = mongoose.model('RosterSpot', RosterSpotSchema);
+module.exports.Schema = RosterSpotSchema;

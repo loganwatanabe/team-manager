@@ -3,6 +3,9 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
+var Player = mongoose.model('Player');
+var Team = mongoose.model('Team');
+var RosterSpot = mongoose.model('RosterSpot');
 
 module.exports = function(app, config) {
   app.configure(function () {

@@ -9,6 +9,7 @@
  var mongoose = require('mongoose'),
    Schema = mongoose.Schema;
 
+var RosterSpot = require('./roster_spot.js').RosterSpot;
 // var RosterSpot = require('./roster_spot');
 // var RosterSpot = mongoose.model('RosterSpot');
    
@@ -23,11 +24,11 @@
 
 
 //doesn't work
-// TeamSchema.methods.getPlayers = function (callback) {
-// 	RosterSpot.getPlayersForTeam(this._id, function(players){
-// 		callback(players);
-// 	})
-// };
+TeamSchema.methods.getPlayers = function (callback) {
+	RosterSpot.getPlayersForTeam(this._id, function(players){
+		callback(players);
+	})
+};
 
 
 //test this
