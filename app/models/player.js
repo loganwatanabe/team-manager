@@ -8,11 +8,17 @@
 	// }], 
 	// function(err, results){
 
+	var mongoose = require('mongoose');
+  	var Schema = mongoose.Schema;
+
+
+
 
 
 //cannot use dependent models in this?????
 // var Family = mongoose.model('Family');
-var RosterSpot = require('./roster_spot.js').RosterSpot;
+// var RosterSpot = require('./roster_spot.js').RosterSpot;
+
 //console.log(RosterSpot);
 
 
@@ -71,5 +77,3 @@ PlayerSchema.methods.getTeams = function (callback) {
 mongoose.model('Player', PlayerSchema);
 module.exports.Player = mongoose.model('Player', PlayerSchema);
 module.exports.Schema = PlayerSchema;
-
-// });
